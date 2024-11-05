@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="src/emblem-checked.ico" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <p>Olá, no que vamos trabalhar hoje?</p>
+        <div class="todo-container">
+            <div class="todo-input">
+                <input type="text" id="task-input" placeholder="Adicionar nova tarefa">
+                <button id="add-task">+ Adicionar</button>
+            </div>
+            <ul class="todo-list" id="task-list"></ul>
+        </div>
+        <footer>
+            Clique em "Adicionar" ou aperte a tecla "Enter" para criar uma nova tarefa.
+        </footer>
+    </div>
+    <div id="message" style="display: none;">Bem-vindo ao To-Do-List! Essa Ferramenta foi criado para melhorar sua produtividade.
+        <br> Criado por <a href="https://thurcruz.github.io/meus-links/" target="_blank"> Arthur Cruz</a>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
