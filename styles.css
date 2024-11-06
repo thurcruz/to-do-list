@@ -23,6 +23,30 @@ body {
     padding: 40px 20px;
 }
 
+h1 {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 32px;
+    color: #e8e8ea;
+    z-index: 10;
+}
+
+p {
+    margin-top: 70px;
+    text-align: center;
+}
+
+#message {
+    color: #a5a8a7;
+    background-color: #262629;
+    text-align: center;
+    padding: 12px;
+    font-size: 12px;
+    border-radius: 8px 8px 0px 0px;
+}
+
 .todo-container {
     background-color: #2a2b32;
     border-radius: 8px;
@@ -33,49 +57,6 @@ body {
     min-height: auto;
     max-height: 80vh;
     overflow-y: auto;
-}
-
-.todo-container::-webkit-scrollbar {
-    width: 40px;
-}
-
-.todo-container::-webkit-scrollbar-thumb {
-    background-color: #3a3b41;
-    border-radius: 10px;
-}
-
-.todo-container::-webkit-scrollbar-track {
-    background-color: #2a2b32;
-}
-
-.todo-container {
-    scrollbar-width: thin;
-    scrollbar-color: #3a3b41 #2a2b32;
-}
-
-h1 {
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 32px; /* Aumentado */
-    color: #e8e8ea;
-    z-index: 10;
-}
-
-p {
-    margin-top: 70px; /* Espaço acima do parágrafo */
-    text-align: center;
-}
-
-#message {
-    color: #a5a8a7;
-    background-color: #262629;
-    text-align: center;
-    padding: 2vh;
-    font-size: 12px;
-    border-radius: 8px 8px 0px 0px;
-    
 }
 
 .todo-input {
@@ -109,11 +90,12 @@ p {
 
 #add-task:hover {
     background-color: #0e8d6c;
-    transform: scale(1.01); /* Aumenta o tamanho do ícone ao passar o mouse */
+    transform: scale(1.01);
 }
 
 .todo-list {
     list-style: none;
+    padding: 0;
 }
 
 .todo-item {
@@ -123,7 +105,7 @@ p {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
-    transition: background-color 0.3s;
+    position: relative;
 }
 
 .todo-item.completed {
@@ -138,21 +120,53 @@ p {
 
 .todo-item span {
     flex-grow: 1;
+    word-wrap: break-word;
+}
+
+.delete-task,
+.edit-task {
+    border: none;
+    background: none;
+    color: #a6a7aa;
+    cursor: pointer;
+    transition: transform 0.2s;
+    margin-left: 10px;
 }
 
 .delete-task {
-    border: none; /* Remove a borda */
-    color: #000000;
-    cursor: pointer; /* Muda o cursor para pointer */
-    transition: transform 0.2s; /* Adiciona uma transição suave */
-    background-color:#ec2943;
+    color: #ffffff;
+    background-color: #ec2943;
     padding: 6px;
     border-radius: 4px;
 }
 
 .delete-task:hover {
-    transform: scale(1.1); /* Aumenta o tamanho do ícone ao passar o mouse */
-    color: #64121d;
+    transform: scale(1.1);
+    background-color: #c91e33;
+}
+
+.edit-task {
+    color: #ffffff;
+    background-color: #2c3135;
+    padding: 6px;
+    border-radius: 4px;
+}
+
+.edit-task:hover {
+    transform: scale(1.1);
+    background-color: #0ddf8ee5;
+}
+
+.task-input-edit {
+    background-color: #3a3b41;
+    color: #e8e8ea;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    width: calc(100% - 72px);
+    font-size: 16px;
+    box-sizing: border-box;
+    margin-right: 10px;
 }
 
 footer {
