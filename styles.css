@@ -59,6 +59,21 @@ p {
     overflow-y: auto;
 }
 
+.todo-container::-webkit-scrollbar {
+    width: 40px;
+}
+.todo-container::-webkit-scrollbar-thumb {
+    background-color: #3a3b41;
+    border-radius: 10px;
+}
+.todo-container::-webkit-scrollbar-track {
+    background-color: #2a2b32;
+}
+.todo-container {
+    scrollbar-width: thin;
+    scrollbar-color: #3a3b41 #2a2b32;
+}
+
 .todo-input {
     display: flex;
     gap: 10px;
